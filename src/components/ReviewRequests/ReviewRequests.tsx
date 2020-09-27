@@ -1,5 +1,6 @@
 import { Button } from 'antd';
 import Modal from 'antd/lib/modal/Modal';
+import { request } from 'https';
 import React, { useState } from 'react';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { addReviewRequest } from '../../actions/actions';
@@ -18,6 +19,7 @@ const ReviewRequests = (): JSX.Element => {
   const [showSubmit, setShowSubmit] = useState(false);
   const [showSelfCheck, setShowSelfCheck] = useState(false);
   const [selectedTask, setSelectedTask] = useState({} as Task);
+  const [currentRequest, setCurrentRequest] = useState({} as ReviewRequest);
 
   const auth = useSelector<AppReduxState, Auth>(
     (state) => state.auth,
@@ -56,19 +58,32 @@ const ReviewRequests = (): JSX.Element => {
       state: 'DRAFT',
       selfGrade: null,
     };
-    dispatch(addReviewRequest(request));
+    setCurrentRequest(request);
     setSelectedTask(tasks[values.task]);
     setShowSelfCheck(true);
   };
 
-  const onSubmitSelfCheck = (values: string): void => {
+  const onSubmitSelfCheck = (values: any): void => {
     setShowSelfCheck(false);
+    const requestToAdd = {
+      ...currentRequest,
+      state: 'PUBLISHED',
+      selfGrade: {
+        task: currentRequest.task,
+        items: values,
+      },
+    };
+    dispatch(addReviewRequest(requestToAdd as ReviewRequest));
     console.log(values);
   };
 
   return (
     <>
-      <Button className="create-btn" type="primary" onClick={onSubmitRequestBtnClick}>
+      <Button
+        className="create-btn"
+        type="primary"
+        onClick={onSubmitRequestBtnClick}
+      >
         Submit request
       </Button>
       <Modal visible={showSubmit} footer={null} onCancel={onCancel}>

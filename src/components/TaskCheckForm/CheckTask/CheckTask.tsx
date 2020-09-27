@@ -73,14 +73,14 @@ const CheckTask = ({
           <p className="task-title">{taskItem.description}</p>
           <Form.Item
             className="check-task__comment"
-            name={`comment-${taskItem.id}`}
+            name={[taskItem.id, 'comment']}
             label="Comment"
           >
             <Input.TextArea rows={4}/>
           </Form.Item>
         </div>
         <Form.Item
-          name={`score-${taskItem.id}`}
+          name={[taskItem.id, 'score']}
           label={taskItem.category}
           rules={[{ required: true }]}
         >

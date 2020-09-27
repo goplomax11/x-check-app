@@ -47,7 +47,7 @@ const TaskCheckForm = ({
             aria-label="Close form button"
           />
           <div className="form-header">
-            <h2 className="title">{singleTask.id}</h2>
+            <h2 className="title">{singleTask.title}</h2>
             <div className="score-container">
               <p className="progress">
                 Checked {checkedTaskItems} out of {singleTask.items.length}
