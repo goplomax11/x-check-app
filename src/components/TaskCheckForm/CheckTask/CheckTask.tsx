@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Select } from 'antd';
+import { Form, Select, Input } from 'antd';
 import { TaskItem } from '../../../models/data-models';
 import './CheckTask.scss';
 
@@ -71,12 +71,16 @@ const CheckTask = ({
         </div>
         <div className="task-description">
           <p className="task-title">{taskItem.description}</p>
-          <a href="##" className="add-feedback">
-            add a comment
-          </a>
+          <Form.Item
+            className="check-task__comment"
+            name={`comment-${taskItem.id}`}
+            label="Comment"
+          >
+            <Input.TextArea rows={4}/>
+          </Form.Item>
         </div>
         <Form.Item
-          name={taskItem.category}
+          name={`score-${taskItem.id}`}
           label={taskItem.category}
           rules={[{ required: true }]}
         >
