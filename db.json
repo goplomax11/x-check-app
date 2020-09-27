@@ -1,0 +1,347 @@
+{
+  "users": [{
+      "githubId": "lp-msarchitect1",
+      "roles": [
+        "student"
+      ],
+      "id": 1
+    },
+    {
+      "githubId": "lp-msarchitect",
+      "roles": [
+        "student"
+      ],
+      "id": 2
+    },
+    {
+      "githubId": "ellankz",
+      "roles": [
+        "coursemanager"
+      ],
+      "id": 3
+    },
+    {
+      "githubId": "Tsyman",
+      "roles": [
+        "student"
+      ],
+      "id": 4
+    }
+  ],
+  "tasks": [{
+      "id": "simple-task-v1",
+      "title": "Simple task v1",
+      "author": "cardamo",
+      "state": "DRAFT",
+      "categoriesOrder": [
+        "Basic Scope",
+        "Extra Scope",
+        "Fines"
+      ],
+      "items": [{
+          "id": "basic_p1",
+          "minScore": 0,
+          "maxScore": 20,
+          "category": "Basic Scope",
+          "title": "Basic things",
+          "description": "You need to make things right, not wrong"
+        },
+        {
+          "id": "extra_p1",
+          "minScore": 0,
+          "maxScore": 30,
+          "category": "Extra Scope",
+          "title": "More awesome things",
+          "description": "Be creative and make up some more awesome things"
+        },
+        {
+          "id": "fines_p1",
+          "minScore": -10,
+          "maxScore": 0,
+          "category": "Fines",
+          "title": "App crashes",
+          "description": "App causes BSoD!"
+        }
+      ]
+    },
+    {
+      "id": "simple-task-v2",
+      "title": "Simple task v2",
+      "author": "test",
+      "state": "PUBLISHED",
+      "categoriesOrder": [
+        "Basic Scope",
+        "Extra Scope",
+        "Fines"
+      ],
+      "items": [{
+          "id": "basic_p1",
+          "minScore": 0,
+          "maxScore": 20,
+          "category": "Basic Scope",
+          "title": "Basic things",
+          "description": "You need to make things right, not wrong"
+        },
+        {
+          "id": "extra_p1",
+          "minScore": 0,
+          "maxScore": 30,
+          "category": "Extra Scope",
+          "title": "More awesome things",
+          "description": "Be creative and make up some more awesome things"
+        },
+        {
+          "id": "extra_p2",
+          "minScore": 0,
+          "maxScore": 50,
+          "category": "Extra Scope",
+          "title": "Even more awesome things",
+          "description": "Be creative and make up some more awesome things"
+        },
+        {
+          "id": "fines_p1",
+          "minScore": -10,
+          "maxScore": 0,
+          "category": "Fines",
+          "title": "App crashes",
+          "description": "App causes BSoD!"
+        }
+      ]
+    },
+    {
+      "title": "Simple task v1",
+      "author": "cardamo",
+      "state": "DRAFT",
+      "categoriesOrder": [
+        "Basic Scope",
+        "Extra Scope",
+        "Fines"
+      ],
+      "items": [{
+          "id": "basic_p1",
+          "minScore": 0,
+          "maxScore": 20,
+          "category": "Basic Scope",
+          "title": "Basic things",
+          "description": "You need to make things right, not wrong"
+        },
+        {
+          "id": "extra_p1",
+          "minScore": 0,
+          "maxScore": 30,
+          "category": "Extra Scope",
+          "title": "More awesome things",
+          "description": "Be creative and make up some more awesome things"
+        },
+        {
+          "id": "fines_p1",
+          "minScore": -10,
+          "maxScore": 0,
+          "category": "Fines",
+          "title": "App crashes",
+          "description": "App causes BSoD!"
+        }
+      ],
+      "id": "ppusd-v"
+    }
+  ],
+  "taskScores": [{
+    "task": "simple-task-v1",
+    "items": {
+      "basic_p1": {
+        "score": 20,
+        "comment": "Well done!"
+      },
+      "extra_p1": {
+        "score": 15,
+        "comment": "Some things are done, some are not"
+      },
+      "fines_p1": {
+        "score": 0,
+        "comment": "No ticket today"
+      }
+    }
+  }],
+  "crossCheckSessions": [{
+    "id": "rss2020Q3react-xcheck",
+    "state": "DRAFT",
+    "taskId": "simple-task-v1",
+    "coefficient": 0.7,
+    "startDate": "2020-07-07",
+    "endDate": "2020-07-14",
+    "discardMinScore": true,
+    "discardMaxScore": false,
+    "minReiewsAmount": 1,
+    "desiredReviewersAmount": 2,
+    "attendees": [{
+        "githubId": "ButterBrot777",
+        "reviewerOf": [
+          "torvalds",
+          "cardamo"
+        ]
+      },
+      {
+        "githubId": "torvalds",
+        "reviewerOf": [
+          "cardamo"
+        ]
+      },
+      {
+        "githubId": "cardamo",
+        "reviewerOf": [
+          "ButterBrot777"
+        ]
+      }
+    ]
+  }],
+  "reviewRequests": [{
+    "id": "rev-req-1",
+    "crossCheckSessionId": "rss2020Q3react-xcheck",
+    "author": "cardamo",
+    "task": "simple-task-v1",
+    "state": "PUBLISHED",
+    "selfGrade": {}
+  }],
+  "reviews": [{
+      "id": "rev-id-1",
+      "requestId": "rev-req-1",
+      "author": "ButterBrot777",
+      "reviewer": "Ellankz",
+      "state": "ACCEPTED",
+      "task": "simple-task-v1",
+      "grade": {
+        "task": "simple-task-v1",
+        "items": {
+          "basic_p1": {
+            "score": 20,
+            "comment": "Well done!"
+          },
+          "extra_p1": {
+            "score": 30,
+            "comment": "Some things are done, some are not"
+          },
+          "fines_p1": {
+            "score": 0,
+            "comment": "No ticket today"
+          }
+        }
+      },
+      "authorFeedback": [
+        "Thank you very much!",
+        "You're welcome.",
+        "Now I'm talking to myself."
+      ]
+    },
+    {
+      "id": "rev-id-2",
+      "requestId": "rev-req-2",
+      "author": "WhoIsThat",
+      "reviewer": "JustMeAndI",
+      "state": "PUBLISHED",
+      "task": "simple-task-v2",
+      "grade": {
+        "task": "simple-task-v2",
+        "items": {
+          "basic_p1": {
+            "score": 17,
+            "comment": "Well done!"
+          },
+          "extra_p1": {
+            "score": 30,
+            "comment": "Some things are done, some are not"
+          },
+          "fines_p1": {
+            "score": 0,
+            "comment": "Too bad"
+          }
+        }
+      },
+      "authorFeedback": [
+        "Please review faster."
+      ]
+    },
+    {
+      "id": "rev-id-3",
+      "requestId": "rev-req-13",
+      "author": "ellankz",
+      "reviewer": "Tsyman",
+      "state": "DISPUTED",
+      "task": "simple-task-v1",
+      "grade": {
+        "task": "simple-task-v1",
+        "items": {
+          "basic_p1": {
+            "score": 15,
+            "comment": "Well done!"
+          },
+          "extra_p1": {
+            "score": 25,
+            "comment": "Some things are done, some are not"
+          },
+          "fines_p1": {
+            "score": 0,
+            "comment": "No ticket today"
+          }
+        }
+      },
+      "authorFeedback": [
+        "Try me!"
+      ]
+    },
+    {
+      "id": "rev-id-4",
+      "requestId": "rev-req-4",
+      "author": "bunny",
+      "reviewer": "ellankz",
+      "state": "PUBLISHED",
+      "task": "simple-task-v1",
+      "grade": {
+        "task": "simple-task-v1",
+        "items": {
+          "basic_p1": {
+            "score": 80,
+            "comment": "Well done!"
+          },
+          "extra_p1": {
+            "score": 10,
+            "comment": "Some things are done, some are not"
+          },
+          "fines_p1": {
+            "score": 0,
+            "comment": "No ticket today"
+          }
+        }
+      },
+      "authorFeedback": []
+    }
+  ],
+  "disputes": [{
+      "id": "randomid",
+      "reviewId": "rev-id-1",
+      "state": "ACCEPTED",
+      "items": [{
+        "taskItem": "extra_p1",
+        "comment": "Check out the 'All things' page to see all things that were implemented",
+        "suggestedScore": 30
+      }],
+      "reviewerComments": []
+    },
+    {
+      "id": "4923ea37-4ea4-4a58-8825-47c743bef0f2",
+      "reviewId": "rev-id-3",
+      "state": "ONGOING",
+      "items": [{
+          "taskItem": "basic_p1",
+          "comment": "i belive you're wrong",
+          "suggestedScore": 20
+        },
+        {
+          "taskItem": "extra_p1",
+          "comment": "so wrong",
+          "suggestedScore": 30
+        }
+      ],
+      "reviewerComments": []
+    }
+  ]
+}
