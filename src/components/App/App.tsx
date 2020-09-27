@@ -36,8 +36,8 @@ const App = (): JSX.Element => {
 
   useEffect(() => {
     dispatch(postUserFetch());
-    dispatch(getTasks());
-    dispatch(getReviewRequests());
+    // dispatch(getTasks());
+    // dispatch(getReviewRequests());
   }, [dispatch]);
 
   return (
