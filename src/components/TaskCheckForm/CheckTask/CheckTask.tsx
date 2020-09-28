@@ -23,7 +23,7 @@ interface CheckTaskProps {
   setTaskScores: Dispatch<SetStateAction<number[]>>;
   checkedTasks: boolean[];
   setCheckedTasks: Dispatch<SetStateAction<boolean[]>>;
-  selfGradeItem?: { score: number; comment?: string | undefined };
+  selfGradeItem?: { score: number | ''; comment?: string | undefined };
 }
 
 const CheckTask = ({
@@ -36,7 +36,7 @@ const CheckTask = ({
   setTaskScores,
   checkedTasks,
   setCheckedTasks,
-  selfGradeItem = { comment: '', score: '' },
+  selfGradeItem,
 }: CheckTaskProps): JSX.Element => {
   const [otherScore, setOtherScore] = useState<number>(0);
   const [baseScores, setBaseScores] = useState<number[]>([
@@ -44,6 +44,9 @@ const CheckTask = ({
     taskItem.maxScore / 2,
     taskItem.maxScore,
   ]);
+
+  // eslint-disable-next-line no-param-reassign
+  selfGradeItem = selfGradeItem || { score: '', comment: '' };
 
   const [commentRequired, setCommentRequired] = useState<boolean>(false);
   const [scoreCategory, setScoreCategory] = useState<string[]>([
