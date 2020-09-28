@@ -24,6 +24,7 @@ interface CheckTaskProps {
   checkedTasks: boolean[];
   setCheckedTasks: Dispatch<SetStateAction<boolean[]>>;
   selfGradeItem?: { score: number | ''; comment?: string | undefined };
+  isSelfGrade?: boolean;
 }
 
 const CheckTask = ({
@@ -37,6 +38,7 @@ const CheckTask = ({
   checkedTasks,
   setCheckedTasks,
   selfGradeItem,
+  isSelfGrade,
 }: CheckTaskProps): JSX.Element => {
   const [otherScore, setOtherScore] = useState<number>(0);
   const [baseScores, setBaseScores] = useState<number[]>([
@@ -70,12 +72,14 @@ const CheckTask = ({
   };
 
   const selectHandler = (value: number): void => {
+    const selfScore = Number(selfGradeItem.score);
     if (!checkedTasks[itemId]) {
       const copy = checkedTasks;
       copy[itemId] = true;
       setCheckedTasks(copy);
       setCheckedTaskItems(checkedTaskItems + 1);
-      setCommentRequired(Number(selfGradeItem.score) !== value);
+      // eslint-disable-next-line no-restricted-globals
+      setCommentRequired(!isSelfGrade && selfScore !== value);
     }
     checkScore(value);
   };

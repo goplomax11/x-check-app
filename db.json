@@ -578,19 +578,29 @@
       "crossCheckSessionId": null,
       "author": "lp-msarchitect",
       "task": "simple-task-v1",
-      "prUrl": "http://test.com",
-      "demoUrl": "http://test.com",
-      "state": "DRAFT",
-      "selfGrade": null
+      "prUrl": "http://test.comdvasvadv",
+      "demoUrl": "http://test12341234.com",
+      "state": "PUBLISHED",
+      "selfGrade": {
+        "task": "simple-task-v1",
+        "items": {
+          "basic_p1": {
+            "score": 10
+          },
+          "extra_p1": {
+            "score": 15
+          }
+        }
+      }
     }
   ],
   "reviews": [
     {
       "id": "rev-id-1",
       "requestId": "rev-req-1",
-      "author": "ButterBrot777",
+      "author": "lp-msarchitect",
       "reviewer": "Ellankz",
-      "state": "ACCEPTED",
+      "state": "PUBLISHED",
       "task": "simple-task-v1",
       "grade": {
         "task": "simple-task-v1",
@@ -600,7 +610,7 @@
             "comment": "Well done!"
           },
           "extra_p1": {
-            "score": 30,
+            "score": 15,
             "comment": "Some things are done, some are not"
           },
           "fines_p1": {
@@ -612,7 +622,8 @@
       "authorFeedback": [
         "Thank you very much!",
         "You're welcome.",
-        "Now I'm talking to myself."
+        "Now I'm talking to myself.",
+        "dfbdfsb"
       ]
     },
     {
@@ -696,46 +707,6 @@
         }
       },
       "authorFeedback": []
-    },
-    {
-      "id": "usjrq80",
-      "requestId": "rev-req-1",
-      "author": "cardamo",
-      "reviewer": "lp-msarchitect",
-      "state": "PUBLISHED",
-      "task": "simple-task-v1",
-      "grade": {
-        "task": "simple-task-v1",
-        "items": {
-          "basic_p1": {
-            "comment": "qewrgewrg",
-            "score": 20
-          },
-          "extra_p1": {
-            "comment": "wergwergerge",
-            "score": 30
-          }
-        }
-      }
-    },
-    {
-      "id": "JrUG8mw",
-      "requestId": "rev-req-1",
-      "author": "cardamo",
-      "reviewer": "lp-msarchitect",
-      "state": "PUBLISHED",
-      "task": "simple-task-v1",
-      "grade": {
-        "task": "simple-task-v1",
-        "items": {
-          "basic_p1": {
-            "score": 20
-          },
-          "extra_p1": {
-            "score": 30
-          }
-        }
-      }
     }
   ],
   "disputes": [

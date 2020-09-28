@@ -89,6 +89,7 @@ const TaskCheckForm = ({
         setCheckedTasks={setCheckedTasks}
         itemId={id}
         selfGradeItem={selfGrade ? selfGrade.items[elem.id] : null}
+        isSelfGrade={!checkedRequest || checkedRequest.author === auth.githubId}
       />
     );
   });

@@ -89,6 +89,7 @@ const ReviewRequests = (): JSX.Element => {
         })
       );
     } else {
+      dispatch(addReviewRequest({ ...request, state: 'COMPLETED' }));
       dispatch(
         addSingleReview({
           id: '',
@@ -107,9 +108,11 @@ const ReviewRequests = (): JSX.Element => {
   };
 
   const onReviewRequestClick = (record: ReviewRequest): void => {
-    setCheckedRequest(record);
-    setSelectedTask(tasks[record.task]);
-    setShowCheck(true);
+    if (record.state !== 'COMPLETED') {
+      setCheckedRequest(record);
+      setSelectedTask(tasks[record.task]);
+      setShowCheck(true);
+    }
   };
 
   return (
