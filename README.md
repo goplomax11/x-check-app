@@ -51,7 +51,7 @@ You can find out how to do it at the following links:
 - [json-server](https://github.com/typicode/json-server)
 - [gatekeeper](https://github.com/prose/gatekeeper)
 
-Change for this all API_KEYS and URLs in ./src/constants/urls.ts
+Change for this all API_KEYS and URLs in `./src/constants/urls.ts`
 
 ## Functionality and features
 
