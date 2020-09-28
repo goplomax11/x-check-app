@@ -46,6 +46,13 @@ vercel login
 vercel
 ```
 
+Also you may need deploy and config your own json-server and gatekeeper for GitHub OAuth.
+You can find out how to do it at the following links:
+- [json-server](https://github.com/typicode/json-server)
+- [gatekeeper](https://github.com/prose/gatekeeper)
+
+Change for this all API_KEYS and URLs in ./src/constants/urls.ts
+
 ## Functionality and features
 
 This application was created as a solution to RS School React course task [XCheck](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/xcheck/xcheck.md).
