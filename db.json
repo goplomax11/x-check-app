@@ -1,0 +1,774 @@
+{
+  "users": [
+    {
+      "githubId": "lp-msarchitect1",
+      "roles": [
+        "student"
+      ],
+      "id": 1
+    },
+    {
+      "githubId": "lp-msarchitect",
+      "roles": [
+        "student"
+      ],
+      "id": 2
+    },
+    {
+      "githubId": "ellankz",
+      "roles": [
+        "coursemanager"
+      ],
+      "id": 3
+    },
+    {
+      "githubId": "Tsyman",
+      "roles": [
+        "student"
+      ],
+      "id": 4
+    }
+  ],
+  "tasks": [
+    {
+      "id": "simple-task-v1",
+      "title": "Simple task v1",
+      "author": "cardamo",
+      "state": "PUBLISHED",
+      "categoriesOrder": [
+        "Basic Scope",
+        "Extra Scope",
+        "Fines"
+      ],
+      "items": [
+        {
+          "id": "basic_p1",
+          "minScore": 0,
+          "maxScore": 20,
+          "category": "Basic Scope",
+          "title": "Basic things",
+          "description": "You need to make things right, not wrong"
+        },
+        {
+          "id": "extra_p1",
+          "minScore": 0,
+          "maxScore": 30,
+          "category": "Extra Scope",
+          "title": "More awesome things",
+          "description": "Be creative and make up some more awesome things"
+        },
+        {
+          "minScore": 0,
+          "maxScore": -10,
+          "category": "Fines",
+          "title": "App causes BSoD!",
+          "description": "App causes BSoD!",
+          "isForMentor": true,
+          "id": "5f010cdc-6c32-43a2-8cd6-a4bef80dc6fa"
+        }
+      ]
+    },
+    {
+      "id": "simple-task-v2",
+      "title": "Simple task v2",
+      "author": "test",
+      "state": "PUBLISHED",
+      "categoriesOrder": [
+        "Basic Scope",
+        "Extra Scope",
+        "Fines"
+      ],
+      "items": [
+        {
+          "id": "basic_p1",
+          "minScore": 0,
+          "maxScore": 20,
+          "category": "Basic Scope",
+          "title": "Basic things",
+          "description": "You need to make things right, not wrong"
+        },
+        {
+          "id": "extra_p1",
+          "minScore": 0,
+          "maxScore": 30,
+          "category": "Extra Scope",
+          "title": "More awesome things",
+          "description": "Be creative and make up some more awesome things"
+        },
+        {
+          "id": "extra_p2",
+          "minScore": 0,
+          "maxScore": 50,
+          "category": "Extra Scope",
+          "title": "Even more awesome things",
+          "description": "Be creative and make up some more awesome things"
+        },
+        {
+          "id": "fines_p1",
+          "minScore": -10,
+          "maxScore": 0,
+          "category": "Fines",
+          "title": "App crashes",
+          "description": "App causes BSoD!"
+        }
+      ]
+    },
+    {
+      "id": "f2e1a2f7-dc29-4e8f-8252-d73372c609e7",
+      "title": "X Check App / RS Assessment Tool",
+      "author": "ellankz",
+      "state": "PUBLISHED",
+      "categoriesOrder": [
+        "Basic Scope",
+        "Extra Scope",
+        "Fines"
+      ],
+      "items": [
+        {
+          "minScore": 0,
+          "maxScore": 10,
+          "category": "Basic Scope",
+          "title": "Упрощённая страница/окно авторизации",
+          "description": "",
+          "id": "4ade69db-ea2a-473d-aeaa-35b236f2a845"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 10,
+          "category": "Basic Scope",
+          "title": "Страница со списком задач (tasks).",
+          "description": "",
+          "id": "f19ab19f-af8c-4255-bca1-7e699b8a1359"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 20,
+          "category": "Basic Scope",
+          "title": "Форма (на отдельной странице или в окне) создания и редактирования задачи.",
+          "description": "",
+          "id": "a71eb942-9d56-4e8a-9c4b-c7f44534e063"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 10,
+          "category": "Basic Scope",
+          "title": "Страница со списком запросов на проверку (review requests).",
+          "description": "",
+          "id": "ab9365cc-b3d5-4080-b8eb-2471449d2e24"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 10,
+          "category": "Basic Scope",
+          "title": "Список запросов на проверку можно сортировать и фильтровать по заданию, выполнившему студенту и статусу.",
+          "description": "",
+          "id": "7e3b585e-773b-438f-bef9-3f2a56643d09"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 10,
+          "category": "Basic Scope",
+          "title": "Форма создания запроса на проверку.",
+          "description": "",
+          "id": "45a6ec78-aaab-4e6f-bd47-d0590110a225"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 20,
+          "category": "Basic Scope",
+          "title": "Форма проверки и самопроверки задания.",
+          "description": "",
+          "id": "a163d96b-dc05-407d-b5bc-d52b7ee82a22"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 10,
+          "category": "Basic Scope",
+          "title": "Страница со списком оценок работ (reviews).",
+          "description": "",
+          "id": "b3b8b1be-0279-4fb8-a899-315e01d721fa"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 10,
+          "category": "Basic Scope",
+          "title": "Список оценок можно сортировать по всем полям/колонкам, где сортировка применима. ",
+          "description": "",
+          "id": "e95c401d-f934-46b1-9e4b-fb2ba101f520"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 10,
+          "category": "Basic Scope",
+          "title": "Список оценок можно фильтровать по заданию, выполнившему студенту и проверяющему.",
+          "description": "",
+          "id": "57e95ad7-1ea9-43cd-b635-209e16b98a2b"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 10,
+          "category": "Basic Scope",
+          "title": "Страница или окно с деталями оценки одного проверяющего.",
+          "description": "",
+          "id": "24be6299-4704-4262-98b4-9ce3eb1d3bf8"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 10,
+          "category": "Basic Scope",
+          "title": "Главная страница со ссылками на остальные доступные страницы ИЛИ всегда видимое меню для навигации. ",
+          "description": "",
+          "id": "b06cd5d3-ebb4-4de9-b5fe-c6095de214f2"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 10,
+          "category": "Extra Scope",
+          "title": "Пометить пункт как штраф ИЛИ возможность указать минимальный балл меньше 0.",
+          "description": "",
+          "id": "c13b21e3-f9cc-43bd-9d3b-26defbe3e3aa"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 10,
+          "category": "Extra Scope",
+          "title": "Пометить пункт как проверяемый только ментором (скрывать при кросс-чеке), или более сложная система ролей при проверке. ",
+          "description": "",
+          "id": "207543f5-5cf8-4707-9ac3-9a5d36e7bfc1"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 10,
+          "category": "Extra Scope",
+          "title": "Объединение требований в категории (basic scope, advanced, etc).",
+          "description": "",
+          "id": "7ffd554f-3fb8-40d3-ae62-b033843c8c49"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 10,
+          "category": "Extra Scope",
+          "title": "Импорт пунктов и категорий в формате RSS Checklist;",
+          "description": "",
+          "id": "5d34047f-da53-4f4c-8728-06d537577c29"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 30,
+          "category": "Extra Scope",
+          "title": "Импорт пунктов и категорий в markdown формате, в котором описано большинство задач RSS.",
+          "description": "",
+          "id": "d2afbea6-ab9f-48a8-8ecf-b65e3be08945"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 20,
+          "category": "Extra Scope",
+          "title": "Экспорт и импорт задания в собственном JSON формате. Побочный эффект - задание легко скопировать, оставив оригинальное без изменений.",
+          "description": "",
+          "id": "0b700e29-bc64-4801-a112-00504ea3a54c"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 10,
+          "category": "Extra Scope",
+          "title": "Кнопки для быстрой оценки (не выполнено - 0 баллов, выполнено частично - 50%, выполнено полностью - 100%), но остаётся возможность указать любое промежуточное значение.",
+          "description": "",
+          "id": "e5a5999d-c437-47cd-9c2c-bf5f84d5d292"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 10,
+          "category": "Extra Scope",
+          "title": "Дать возможность проверяющему добавить ещё один пункт со штрафными или поощрительными баллами. ",
+          "description": "Способы реализации могут быть различными, например можно просто дать возможность указывать не только максимальный балл за требование, но и минимальный меньше ноля. ",
+          "id": "bab48a95-97a0-4c70-890a-f1b0c8b3d64f"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 10,
+          "category": "Extra Scope",
+          "title": "Сделать поле комментария обязательным, если оценка не совпадает с самопроверкой. ",
+          "description": "",
+          "id": "fa90a0e9-1bd0-40b0-83c7-8dc9afafff62"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 10,
+          "category": "Extra Scope",
+          "title": "Промежуточное состояние проверки (и самопроверки тоже) можно сохранить, не публикуя её.",
+          "description": "",
+          "id": "e2c43661-3e2e-43e7-a805-87b4704c3e4f"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 10,
+          "category": "Extra Scope",
+          "title": "Возможность оставить обратную связь проверяющему - поблагодарить или пожаловаться.",
+          "description": "",
+          "id": "4bb97945-bcb3-4a3f-bcfe-258048df9205"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 30,
+          "category": "Extra Scope",
+          "title": "Возможность оспорить оценку по каждому пункту.",
+          "description": "",
+          "id": "574fc4d6-fa73-4574-91fc-c348aac5322b"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 10,
+          "category": "Extra Scope",
+          "title": "Принять решение по оспариваемому пункту может не только проверяющий, но и пользователь со специальной ролью.",
+          "description": "",
+          "id": "055bf715-d29d-4fc5-9fd0-0f46f01b56ad"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 20,
+          "category": "Extra Scope",
+          "title": "Страница со списком кросс-чек сессий. Автор заданий (или другая роль на ваше усмотрение) может создавать и редактировать сессии. ",
+          "description": "",
+          "id": "0e66f31a-3867-4dfe-bec1-53a4a8e131dc"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 10,
+          "category": "Extra Scope",
+          "title": "Страница со списком кросс-чек сессий. ",
+          "description": "Автор заданий (или другая роль на ваше усмотрение) может создавать и редактировать сессии.",
+          "id": "49afbdb8-2aaa-4649-a347-3b291ea4879c"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 10,
+          "category": "Extra Scope",
+          "title": "Автор задания может остановить сбор запросов на проверку в рамках кросс-чек сессии и случайным образом распределить проверяющих.",
+          "description": "",
+          "id": "899513b0-88a4-4386-8ef4-5d6a5bcfd28d"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 10,
+          "category": "Extra Scope",
+          "title": "Автор задания может завершить кросс-чек сессию, после чего студент может посмотреть свою итоговую оценку.",
+          "description": "",
+          "id": "01717bfc-5fbf-4572-80c8-461b5e222b85"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 30,
+          "category": "Extra Scope",
+          "title": "Каждое действие, меняющее данные, доступно только при наличии у пользователя соответствующей роли.",
+          "description": " Набор ролей можно взять из примера или придумать свои.",
+          "id": "fb744b16-fc2c-4610-9cd3-64f5f8440886"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 20,
+          "category": "Extra Scope",
+          "title": "Полноценная авторизация через GitHub OAuth. Для удобства проверки выбор ролей лучше оставить при логине.",
+          "description": "",
+          "id": "8875ce9c-671b-4f22-94c0-64aa13c8120b"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 10,
+          "category": "Extra Scope",
+          "title": "В исходной базе (db.json) есть примеры сущностей каждого типа.",
+          "description": "",
+          "id": "11955962-3529-4c6c-aed8-1d8186824a6d"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 10,
+          "category": "Extra Scope",
+          "title": "В исходной базе (db.json) воспроизведено задание xcheck и создан запрос на его оценку",
+          "description": "",
+          "id": "735c6a29-b7da-4143-8dfb-30e11a3756bc"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 30,
+          "category": "Extra Scope",
+          "title": "Дополнительные полезные возможности, не описанные в требованиях к заданию. ",
+          "description": "Для оценки должны обязательно быть описаны в README.",
+          "id": "18cb0bb2-d3b5-4681-8c65-ffa0e5da1faa"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 20,
+          "category": "Extra Scope",
+          "title": "README файл в репозитории с описанием используемых технологий, инструкцией для начала разработки и для деплоя продакшн версии.",
+          "description": "",
+          "id": "15db477e-eaa7-4a6e-abdf-fd19eaecca8c"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 50,
+          "category": "Extra Scope",
+          "title": "Написаны юнит-тесты, code coverage > 50%. ",
+          "description": "Способ получения coverage report описан в README",
+          "id": "efafb5e3-23db-4ba0-bf35-a669eb295588"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 30,
+          "category": "Extra Scope",
+          "title": "По названиям юнит тестов понятно, что они тестируют.",
+          "description": " Тесты не просто вызывают код, но и делают осмысленные ассерты. до +30, если code coverage меньше 50%, максимальная оценка снижается пропорционально (при 25% максимум +15 баллов).",
+          "id": "4d83006e-829d-450c-a153-b8eef5bfc008"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 20,
+          "category": "Extra Scope",
+          "title": "Использован eslint preset (не обязательно airbnb) и нет предупреждений и ошибок. ",
+          "description": "",
+          "id": "e4115279-c6e5-4a14-ad8f-7e3577167434"
+        },
+        {
+          "minScore": 0,
+          "maxScore": 10,
+          "category": "Extra Scope",
+          "title": "В репозитории есть \"следы\" активной командной работы - комментарии в пулл реквестах.",
+          "description": "",
+          "id": "43dc84b5-634a-4e3f-a5a6-721ed1db2b5a"
+        }
+      ]
+    }
+  ],
+  "taskScores": [
+    {
+      "task": "simple-task-v1",
+      "items": {
+        "basic_p1": {
+          "score": 20,
+          "comment": "Well done!"
+        },
+        "extra_p1": {
+          "score": 15,
+          "comment": "Some things are done, some are not"
+        },
+        "fines_p1": {
+          "score": 0,
+          "comment": "No ticket today"
+        }
+      }
+    }
+  ],
+  "crossCheckSessions": [
+    {
+      "id": "rss2020Q3react-xcheck",
+      "state": "DRAFT",
+      "taskId": "simple-task-v1",
+      "coefficient": 0.7,
+      "startDate": "2020-07-07",
+      "endDate": "2020-07-14",
+      "discardMinScore": true,
+      "discardMaxScore": false,
+      "minReiewsAmount": 1,
+      "desiredReviewersAmount": 2,
+      "attendees": [
+        {
+          "githubId": "ButterBrot777",
+          "reviewerOf": [
+            "torvalds",
+            "cardamo"
+          ]
+        },
+        {
+          "githubId": "torvalds",
+          "reviewerOf": [
+            "cardamo"
+          ]
+        },
+        {
+          "githubId": "cardamo",
+          "reviewerOf": [
+            "ButterBrot777"
+          ]
+        }
+      ]
+    },
+    {
+      "state": "REQUESTS_GATHERING",
+      "taskId": "simple-task-v2",
+      "startDate": "2020-09-21T18:44:55.952Z",
+      "endDate": "2020-09-16T18:44:57.795Z",
+      "discardMinScore": false,
+      "discardMaxScore": false,
+      "minReiewsAmount": 1,
+      "desiredReviewersAmount": 2,
+      "coefficient": 3,
+      "attendees": [],
+      "id": "HWlnQFs"
+    }
+  ],
+  "reviewRequests": [
+    {
+      "id": "rev-req-1",
+      "crossCheckSessionId": "rss2020Q3react-xcheck",
+      "author": "cardamo",
+      "task": "simple-task-v1",
+      "state": "PUBLISHED",
+      "selfGrade": {
+        "task": "simple-task-v1",
+        "items": {
+          "basic_p1": {
+            "comment": "234r23r",
+            "score": 0
+          },
+          "extra_p1": {
+            "comment": "234r2344r",
+            "score": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "cnp45LD",
+      "crossCheckSessionId": null,
+      "author": "",
+      "task": "f2e1a2f7-dc29-4e8f-8252-d73372c609e7",
+      "prUrl": "https://github.com/goplomax11/x-check-app/pull/40",
+      "demoUrl": "https://x-check-app-team-group30-lp-msarchitect.netlify.app/",
+      "state": "DRAFT",
+      "selfGrade": null
+    },
+    {
+      "id": "XU3ZIMt",
+      "crossCheckSessionId": null,
+      "author": "lp-msarchitect",
+      "task": "f2e1a2f7-dc29-4e8f-8252-d73372c609e7",
+      "prUrl": "http://test.com",
+      "demoUrl": "http://test.com",
+      "state": "DRAFT",
+      "selfGrade": null
+    },
+    {
+      "id": "wzCcIrs",
+      "crossCheckSessionId": null,
+      "author": "lp-msarchitect",
+      "task": "simple-task-v2",
+      "prUrl": "http://test.com",
+      "demoUrl": "http://test.com",
+      "state": "PUBLISHED",
+      "selfGrade": {
+        "task": "simple-task-v2",
+        "items": {
+          "basic_p1": {
+            "score": 10
+          },
+          "extra_p1": {
+            "score": 15
+          },
+          "extra_p2": {
+            "score": 25
+          },
+          "fines_p1": {
+            "score": -10
+          }
+        }
+      }
+    },
+    {
+      "id": "1gW4mKp",
+      "crossCheckSessionId": null,
+      "author": "lp-msarchitect",
+      "task": "simple-task-v1",
+      "prUrl": "http://test.com",
+      "demoUrl": "http://test.com",
+      "state": "DRAFT",
+      "selfGrade": null
+    }
+  ],
+  "reviews": [
+    {
+      "id": "rev-id-1",
+      "requestId": "rev-req-1",
+      "author": "ButterBrot777",
+      "reviewer": "Ellankz",
+      "state": "ACCEPTED",
+      "task": "simple-task-v1",
+      "grade": {
+        "task": "simple-task-v1",
+        "items": {
+          "basic_p1": {
+            "score": 20,
+            "comment": "Well done!"
+          },
+          "extra_p1": {
+            "score": 30,
+            "comment": "Some things are done, some are not"
+          },
+          "fines_p1": {
+            "score": 0,
+            "comment": "No ticket today"
+          }
+        }
+      },
+      "authorFeedback": [
+        "Thank you very much!",
+        "You're welcome.",
+        "Now I'm talking to myself."
+      ]
+    },
+    {
+      "id": "rev-id-2",
+      "requestId": "rev-req-2",
+      "author": "WhoIsThat",
+      "reviewer": "JustMeAndI",
+      "state": "PUBLISHED",
+      "task": "simple-task-v2",
+      "grade": {
+        "task": "simple-task-v2",
+        "items": {
+          "basic_p1": {
+            "score": 17,
+            "comment": "Well done!"
+          },
+          "extra_p1": {
+            "score": 30,
+            "comment": "Some things are done, some are not"
+          },
+          "fines_p1": {
+            "score": 0,
+            "comment": "Too bad"
+          }
+        }
+      },
+      "authorFeedback": [
+        "Please review faster."
+      ]
+    },
+    {
+      "id": "rev-id-3",
+      "requestId": "rev-req-13",
+      "author": "ellankz",
+      "reviewer": "Tsyman",
+      "state": "DISPUTED",
+      "task": "simple-task-v1",
+      "grade": {
+        "task": "simple-task-v1",
+        "items": {
+          "basic_p1": {
+            "score": 15,
+            "comment": "Well done!"
+          },
+          "extra_p1": {
+            "score": 25,
+            "comment": "Some things are done, some are not"
+          },
+          "fines_p1": {
+            "score": 0,
+            "comment": "No ticket today"
+          }
+        }
+      },
+      "authorFeedback": [
+        "Try me!"
+      ]
+    },
+    {
+      "id": "rev-id-4",
+      "requestId": "rev-req-4",
+      "author": "bunny",
+      "reviewer": "ellankz",
+      "state": "PUBLISHED",
+      "task": "simple-task-v1",
+      "grade": {
+        "task": "simple-task-v1",
+        "items": {
+          "basic_p1": {
+            "score": 80,
+            "comment": "Well done!"
+          },
+          "extra_p1": {
+            "score": 10,
+            "comment": "Some things are done, some are not"
+          },
+          "fines_p1": {
+            "score": 0,
+            "comment": "No ticket today"
+          }
+        }
+      },
+      "authorFeedback": []
+    },
+    {
+      "id": "usjrq80",
+      "requestId": "rev-req-1",
+      "author": "cardamo",
+      "reviewer": "lp-msarchitect",
+      "state": "PUBLISHED",
+      "task": "simple-task-v1",
+      "grade": {
+        "task": "simple-task-v1",
+        "items": {
+          "basic_p1": {
+            "comment": "qewrgewrg",
+            "score": 20
+          },
+          "extra_p1": {
+            "comment": "wergwergerge",
+            "score": 30
+          }
+        }
+      }
+    },
+    {
+      "id": "JrUG8mw",
+      "requestId": "rev-req-1",
+      "author": "cardamo",
+      "reviewer": "lp-msarchitect",
+      "state": "PUBLISHED",
+      "task": "simple-task-v1",
+      "grade": {
+        "task": "simple-task-v1",
+        "items": {
+          "basic_p1": {
+            "score": 20
+          },
+          "extra_p1": {
+            "score": 30
+          }
+        }
+      }
+    }
+  ],
+  "disputes": [
+    {
+      "id": "randomid",
+      "reviewId": "rev-id-1",
+      "state": "ACCEPTED",
+      "items": [
+        {
+          "taskItem": "extra_p1",
+          "comment": "Check out the 'All things' page to see all things that were implemented",
+          "suggestedScore": 30
+        }
+      ],
+      "reviewerComments": []
+    },
+    {
+      "id": "4923ea37-4ea4-4a58-8825-47c743bef0f2",
+      "reviewId": "rev-id-3",
+      "state": "ONGOING",
+      "items": [
+        {
+          "taskItem": "basic_p1",
+          "comment": "i belive you're wrong",
+          "suggestedScore": 20
+        },
+        {
+          "taskItem": "extra_p1",
+          "comment": "so wrong",
+          "suggestedScore": 30
+        }
+      ],
+      "reviewerComments": []
+    }
+  ]
+}
