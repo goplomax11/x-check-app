@@ -115,6 +115,13 @@ class DataService {
     return this.setResource<CrossCheckSession>('/crossCheckSessions', session);
   }
 
+  async updateSession(session: CrossCheckSession): Promise<CrossCheckSession> {
+    return (await this.putResource(
+      `/crossCheckSessions/${session.id}`,
+      session
+    )) as CrossCheckSession;
+  }
+
   async deleteTask(taskId: string): Promise<Task> {
     return this.deleteResource<Task>('/tasks', taskId);
   }

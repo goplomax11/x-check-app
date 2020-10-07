@@ -6,7 +6,7 @@ import { useHistory } from 'react-router-dom';
 import { Modal, Form, InputNumber, Select, DatePicker, Checkbox } from 'antd';
 import moment from 'moment';
 import { CrossCheckSession, Task } from '../../models/data-models';
-import { createSession } from '../../actions/actions';
+import { addError, createSession, updateSession } from '../../actions/actions';
 import { TasksState } from '../../models/redux-models';
 
 interface EditSessionFormProps {
@@ -41,7 +41,7 @@ const EditSessionForm = ({
     };
   }
 
-  const handleOk = async () => {
+  const handleOk = async (): Promise<void> => {
     try {
       const values = await form.validateFields([
         'task',
@@ -68,19 +68,19 @@ const EditSessionForm = ({
       if (session) {
         newSession.id = session.id;
         newSession.attendees = session.attendees;
+        dispatch(updateSession(newSession));
+      } else {
+        dispatch(createSession(newSession));
       }
-
-      dispatch(createSession(newSession));
       history.push('/sessions');
 
       onCloseOrSubmit();
     } catch (errorInfo) {
-      // eslint-disable-next-line no-console
-      console.log('Failed:', errorInfo);
+      dispatch(addError('There was an error processing your request'));
     }
   };
 
-  const handleCancel = () => {
+  const handleCancel = (): void => {
     onCloseOrSubmit();
   };
 

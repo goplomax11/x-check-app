@@ -9,7 +9,7 @@ import {
   SessionsState,
   TasksState,
 } from '../../models/redux-models';
-import { CrossCheckSession } from '../../models/data-models';
+import { Auth, CrossCheckSession } from '../../models/data-models';
 import { getSession } from '../../actions/actions';
 import StateTag from '../StateTag/StateTag';
 import CreateSession from '../CreateSession/CreateSession';
@@ -26,7 +26,9 @@ const Sessions = (): JSX.Element => {
   );
 
   const tasks = useSelector<AppReduxState, TasksState>((state) => state.tasks);
-
+  const auth = useSelector<AppReduxState, Auth>((state) => state.auth);
+  const canCreate =
+    auth.roles.includes('author') || auth.roles.includes('coursemanager');
   const dispatch: AppDispatch = useDispatch();
 
   useEffect(() => {
@@ -42,7 +44,7 @@ const Sessions = (): JSX.Element => {
   return (
     <div className="sessions">
       <h2>Cross-Check Sessions</h2>
-      <CreateSession />
+      {canCreate && <CreateSession tasks={tasks} />}
       <Collapse accordion>
         {sessionsArr.map((session) => {
           if (session.id && tasks && tasks[session.taskId]) {

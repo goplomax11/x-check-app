@@ -26,7 +26,6 @@ interface CreateTaskProps {
 }
 
 const TaskForm = ({ taskId }: CreateTaskProps): JSX.Element => {
-  const [task, setTask] = useState<Task | null>(null);
   const { githubId } = useSelector<AppReduxState, Auth>((state) => state.auth);
   const dummyTask: Task = {
     id: '',
@@ -36,6 +35,7 @@ const TaskForm = ({ taskId }: CreateTaskProps): JSX.Element => {
     categoriesOrder: scopes as TaskItemCategory[],
     items: [],
   };
+  const [task, setTask] = useState<Task>(dummyTask);
   const history = useHistory();
   const dispatch: AppDispatch = useDispatch();
 
@@ -46,11 +46,12 @@ const TaskForm = ({ taskId }: CreateTaskProps): JSX.Element => {
     }
   }, [dispatch, taskId]);
 
-  const tasks = useSelector<AppReduxState, TasksState>((state) => state.tasks);
-
-  useEffect(() => {
-    setTask(taskId ? tasks[taskId] : dummyTask);
-  }, [dummyTask, taskId, tasks]);
+  useSelector<AppReduxState, TasksState>((state) => {
+    if (taskId) {
+      setTask(state.tasks[taskId]);
+    }
+    return state.tasks;
+  });
 
   const handleChangeItems = (newItems: TaskItem[]): void => {
     if (task) setTask({ ...task, items: newItems });

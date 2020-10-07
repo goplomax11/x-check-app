@@ -252,6 +252,17 @@ const sessionsReducer = (state = {}, action: AnyAction): SessionsState => {
         ) as SessionsState;
       }
       return state;
+    case ACTIONS.UPDATE_SESSION:
+      if (action.payload) {
+        return keyBy(
+          {
+            ...state,
+            [action.payload.res.id]: action.payload.res as CrossCheckSession,
+          },
+          'id'
+        ) as SessionsState;
+      }
+      return state;
     default:
       return state;
   }

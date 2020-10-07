@@ -568,6 +568,29 @@ export const createSession = (session: CrossCheckSession) => async (
     });
 };
 
+export const updateSession = (session: CrossCheckSession) => async (
+  dispatch: (action: AnyAction) => void
+): Promise<void> => {
+  dataService
+    .updateSession(session)
+    .then((body) => {
+      dispatch({
+        type: ACTIONS.UPDATE_SESSION,
+        payload: {
+          res: body,
+        },
+      });
+    })
+    .catch(() => {
+      dispatch({
+        type: ACTIONS.ADD_ERROR,
+        error: {
+          message: 'There was an error while updating session.',
+        },
+      });
+    });
+};
+
 export const getSession = () => async (
   dispatch: (action: AnyAction) => void
 ): Promise<void> => {
@@ -589,4 +612,13 @@ export const getSession = () => async (
         },
       });
     });
+};
+
+export const addError = (message: string): AnyAction => {
+  return {
+    type: ACTIONS.ADD_ERROR,
+    error: {
+      message,
+    },
+  };
 };

@@ -34,6 +34,7 @@ You can also deploy the application to a remote server like [Netlify](https://ww
 For this you will need to either upload a ready-made build manually or fork the repository, so that you can [connect your netlify site to your github repository](<[Netlify](https://www.netlify.com/blog/2016/07/22/deploy-react-apps-in-less-than-30-seconds/)>).
 
 Or with a few commands in the terminal:
+
 ```
 npm i -g vercel
 // or
@@ -81,6 +82,7 @@ This will show you coverage report, that will look something like this:
 ![test coverage report demo](https://i.imgur.com/5bFhnTS.png 'test coverage report demo')
 
 eslint check
+
 ```
 npm run lint
 ```
@@ -90,3 +92,16 @@ npm run lint
 All actions allowed and disallowed for different roles [are described here](https://docs.google.com/spreadsheets/d/1Uke8tvGoI-RN2K_Zv8Ji3oZMaPVTSco1SWWc0Uad92M/edit?usp=sharing).
 
 Now any user can select any number of roles to simplify testing, after being authenticated
+
+## Technologies
+
+The front-end part of the application utilizes such technologies as:
+
+1. **React** - including it's **Hooks API** and **React Router**.
+2. The styling is based on **Ant Design** and it's ready-made components for React.
+3. **Redux**, **React-Redux** and **Redux Thunk** as middleware to dispatch actions asynchroniously. We also use Redux hooks, such as useSelector and useDispatch.
+4. We used **Fetch API** to get data from server.
+5. **TypeScript** and **ESLint** to ensure the code is error-free.
+6. **GitHub OAuth** to authorize users by their GitHub account.
+
+The back-end part is covered by **JSON-Server** package, which is deployed to **Heroku**.

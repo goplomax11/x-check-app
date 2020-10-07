@@ -65,7 +65,7 @@ describe('tasks action creators', () => {
     });
   });
 
-  const createMockTask = (): Task => {
+  const createMockTask = () => {
     return {
       id: uuidv4(),
       title: 'This task is created by test',
@@ -101,7 +101,7 @@ describe('tasks action creators', () => {
     };
   };
 
-  it('should succesfully create and delete task and return corresponding actions', async () => {
+  it('should succesfully create task and return corresponding action', async () => {
     const task = createMockTask();
     const expectedActionCreate = {
       type: ACTIONS.CREATE_TASK,
@@ -109,19 +109,11 @@ describe('tasks action creators', () => {
         res: task,
       },
     };
-    const expectedActionDelete = {
-      type: ACTIONS.DELETE_TASK,
-      payload: task.id,
-    };
     const store = mockStore({
       tasks: [],
     });
     await store.dispatch(actions.createTask(task));
-    await store.dispatch(actions.deleteTask(task.id));
-    return expect(store.getActions()).toEqual([
-      expectedActionCreate,
-      expectedActionDelete,
-    ]);
+    return expect(store.getActions()).toEqual([expectedActionCreate]);
   });
 
   it('should update task succsfully and return action', async () => {
@@ -230,36 +222,7 @@ describe('reviews and disputes test suite', () => {
     };
   };
 
-  const createMockReview = () => {
-    return {
-      id: uuidv4(),
-      requestId: 'rev-req-2',
-      author: 'ellankz',
-      reviewer: 'thatguy',
-      state: 'DISPUTED',
-      task: 'simple-task-v2',
-      grade: {
-        task: 'simple-task-v2',
-        items: {
-          basic_p1: {
-            score: 10,
-            comment: 'Yes',
-          },
-          extra_p1: {
-            score: 30,
-            comment: 'okay',
-          },
-          fines_p1: {
-            score: 0,
-            comment: 'Nope',
-          },
-        },
-      },
-      authorFeedback: [],
-    };
-  };
-
-  it('should create a dispute, change review state and delete the dispute and dispatch actions with results', async () => {
+  it('should create a dispute, change review state and dispatch actions with results', async () => {
     const reviewId = 'rev-id-4';
     const review = data.reviews.find((review) => review.id === reviewId);
     const dispute = createMockDispute(reviewId);
@@ -280,18 +243,9 @@ describe('reviews and disputes test suite', () => {
       reviews: {},
     });
     await store.dispatch(actions.addDispute(dispute, review));
-    expect(store.getActions()).toEqual([
-      expectedDisputeAction,
-      expectedReviewAction,
-    ]);
-    await store.dispatch(actions.deleteDispute(dispute));
     return expect(store.getActions()).toEqual([
       expectedDisputeAction,
       expectedReviewAction,
-      {
-        type: ACTIONS.DELETE_DISPUTE,
-        payload: reviewId,
-      },
     ]);
   });
 
@@ -404,7 +358,7 @@ const localStorageMock = {
   setItem: jest.fn(),
   clear: jest.fn(),
 };
-// global.localStorage = localStorageMock;
+global.localStorage = localStorageMock;
 
 describe('auth action creators tests', () => {
   it('logs in user, dispatches an action', async () => {
@@ -454,31 +408,23 @@ describe('review request actions', () => {
     return {
       id: uuidv4(),
       crossCheckSessionId: '',
-      author: 'cardamo',
+      author: uuidv4(),
       task: 'f2e1a2f7-dc29-4e8f-8252-d73372c609e7',
       state: 'PUBLISHED',
       selfGrade: {},
     };
   };
 
-  it('should add and delete review request and dispatch actions', async () => {
+  it('should add review request and dispatch action', async () => {
     const request = createMockReviewRequest();
     const expectedActionCreate = {
       type: ACTIONS.ADD_REVIEW_REQUEST,
       payload: { ...request },
     };
-    const expectedActionDelete = {
-      type: ACTIONS.DELETE_REVIEW_REQUEST,
-      payload: request.id,
-    };
     const store = mockStore({
       reviewRequests: {},
     });
     await store.dispatch(actions.addReviewRequest(request));
-    await store.dispatch(actions.deleteReviewRequest(request));
-    expect(store.getActions()).toEqual([
-      expectedActionCreate,
-      expectedActionDelete,
-    ]);
+    expect(store.getActions()).toEqual([expectedActionCreate]);
   });
 });
